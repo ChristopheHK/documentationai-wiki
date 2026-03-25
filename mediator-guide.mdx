@@ -1,100 +1,185 @@
 ---
-title: Guide for Mediators
-description: Learn how to join the Avosmarc network, manage your profile, and handle mediation cases through the platform.
+title: Guide médiateur Hub Médiation
+description: Comprendre comment créer et suivre un dossier, inviter les parties, gérer les délais, statuts, confidentialité et demandes externes sur Hub Médiation.
 ---
 
-## Joining the Avosmarc Network
+## Vue d’ensemble
 
-As a certified mediator, you can join the Avosmarc network to access client requests from across France. Registration connects you to the national directory and enables case management through the Hub Médiation platform.
+Hub Médiation (Hub Avosmarc) centralise vos dossiers de médiation : création de dossier, invitations des parties et avocats, gestion des délais, suivi des statuts et traitement des demandes externes transmises par le réseau Avosmarc.
+
+## Accès et prérequis
+
+L’accès médiateur se fait via votre compte Avosmarc associé à votre espace professionnel de médiation.
 
 <Callout kind="info">
-  Ensure you hold a valid mediation certification before registering. The process takes about 5 minutes.
+  Le cloisonnement est strict : un invité (partie ou avocat) ne voit que les dossiers auxquels il est invité. Le médiateur propriétaire du workspace reste le seul à voir l’ensemble des dossiers de son espace. Les données sont traitées conformément aux principes de confidentialité de la médiation et au cadre RGPD.
 </Callout>
 
+- Vous devez être **médiateur référencé** dans le réseau Avosmarc.
+- L’**App Admin** peut valider/assigner des dossiers à un médiateur, mais n’accède pas au contenu confidentiel des échanges.
+- Les parties (demandeur, défendeur) et leurs avocats éventuels ne voient que les informations du dossier pour lequel ils ont reçu une invitation (magic link).
+
+Si vous n’arrivez pas à vous connecter ou que vous ne voyez pas un dossier qui devrait vous être assigné, contactez le support Avosmarc ou votre App Admin.
+
+## Créer un dossier de médiation
+
+La création d’un dossier suit un flux guidé en quatre étapes : **Informations Générales → Parties & Conseils → Paramètres Temporels → Validation & Envoi**.
+
 <Steps>
-  <Step title="Visit Registration Page" icon="external-link">
-    Navigate to the [mediator registration page](https://avosmarc.fr/mediateur/inscription).
+  <Step title="Renseigner les informations générales" icon="file-text">
+    Saisissez les éléments de base du dossier : intitulé de la médiation, description synthétique du litige, type de conflit, références utiles (numéro de dossier interne, juridiction le cas échéant). Ces informations structurent le dossier et seront visibles par les parties une fois invitées.
   </Step>
-  <Step title="Fill Out Form" icon="edit-3">
-    Provide your professional details, certification number, areas of expertise, and contact information.
+
+  <Step title="Ajouter les parties et leurs conseils" icon="users">
+    Ajoutez les parties en indiquant pour chacune son rôle (demandeur, défendeur), son nom et ses coordonnées (au minimum l’email). Le cas échéant, ajoutez un avocat (conseil) rattaché à chaque partie, en précisant ses coordonnées. Ces informations serviront à générer les invitations (magic links).
   </Step>
-  <Step title="Submit and Verify" icon="check-circle">
-    Submit the form and check your email for verification. Activate your account to access the dashboard.
+
+  <Step title="Configurer les paramètres temporels" icon="clock">
+    Définissez le **Délai de relance** et le **Délai de réponse max** pour les invitations. Par défaut, le délai de relance est de 15 jours et le délai de réponse maximum est de 30 jours. Vous pouvez adapter ces valeurs en fonction du contexte de la médiation, dans le respect de vos contraintes de planning.
+  </Step>
+
+  <Step title="Choisir entre brouillon ou envoi" icon="check-circle">
+    À l’étape **Validation & Envoi**, choisissez :
+    
+    - **Enregistrer en Brouillon** : le dossier reste en statut initialisation, visible uniquement par vous. Aucune invitation n’est envoyée.
+    - **Créer et Envoyer** : la plateforme envoie les invitations aux parties et avocats, et le dossier passe en statut **En attente d’accord**.
+    
+    Utilisez le brouillon si vous devez encore compléter des informations avant de prévenir les parties.
   </Step>
 </Steps>
 
-## Dashboard Overview
+Une fois le dossier créé et envoyé, surveillez les réponses des invités pour suivre la bascule du dossier vers l’état actif.
 
-After logging in at [https://avosmarc.fr/login](https://avosmarc.fr/login), you land on the mediator dashboard. It provides a centralized view of your profile, incoming requests, active sessions, and analytics.
+## Inviter parties et avocats (magic link)
 
-<Tabs>
-  <Tab title="Profile Management" icon="user">
-    Update your bio, availability, hourly rates, and expertise tags. Add documents like certifications for client trust.
-  </Tab>
-  <Tab title="Request Inbox" icon="inbox">
-    View new mediation requests matching your profile. Filter by dispute type, location, or urgency.
-  </Tab>
-  <Tab title="Sessions" icon="calendar">
-    Schedule and track mediation sessions. Log outcomes, generate reports, and invoice clients directly.
-  </Tab>
-</Tabs>
+Les invitations sont envoyées par email sous forme de **liens sécurisés individuels** (magic links). Chaque lien donne accès uniquement au dossier concerné, avec un niveau de visibilité adapté au rôle de l’invité.
 
-## Managing Client Requests and Sessions
+- **Parties** (demandeur, défendeur) reçoivent un email les invitant à accepter ou refuser la médiation.
+- **Avocats** (facultatifs) reçoivent un accès en lecture et contribution selon la configuration, rattaché à la partie qu’ils assistent.
+- Chaque magic link est personnel et ne doit pas être transmis à un tiers.
 
-Handle requests efficiently to resolve disputes amicably. Respond promptly to build your reputation on the platform.
+Pour relancer une partie qui n’a pas répondu, utilisez la fonction de relance associée au **Délai de relance** configuré dans les paramètres temporels.
 
-<Columns cols={2}>
-  <Card title="Review Requests" icon="search" href="#">
-    Assess request details including parties involved, dispute summary, and proposed timelines.
-  </Card>
-  <Card title="Accept or Decline" icon="check-circle" href="#">
-    Accept suitable cases or politely decline others. Provide reasons for transparency.
-  </Card>
-  <Card title="Schedule Sessions" icon="calendar" href="#">
-    Propose dates via the built-in scheduler. Coordinate with all parties.
-  </Card>
-  <Card title="Conduct Mediation" icon="video" href="#">
-    Use secure video calls or in-person notes. Document agreements in real-time.
-  </Card>
-</Columns>
+## Délais et automatisations
+
+Les délais structurent le rythme de la phase d’acceptation de la médiation.
+
+### Paramètres temporels
+
+- **Délai de relance** (par défaut 15 jours) : durée à l’issue de laquelle le système prévoit une relance automatique des parties qui n’ont pas encore répondu.
+- **Délai de réponse max** (par défaut 30 jours) : durée maximale accordée aux parties pour accepter ou refuser la médiation.
+
+<Callout kind="info">
+  Le respect des délais vous évite des dossiers bloqués indéfiniment en « En attente d’accord ». L’expiration du délai de réponse max peut entraîner une clôture du dossier pour motif « Expiré ».
+</Callout>
+
+### Effets concrets
+
+- Tant que le délai de réponse max n’est pas atteint, les parties peuvent **accepter ou refuser** depuis leur magic link.
+- À l’issue du délai max, si une ou plusieurs parties n’ont pas répondu, le dossier peut être automatiquement ou manuellement clôturé avec le motif **Expiré**.
+- Le mécanisme de relance s’appuie sur le délai de relance paramétré ; adaptez-le pour les dossiers sensibles ou urgents.
+
+## Cycle de vie et statuts d’un dossier
+
+Chaque dossier suit un cycle de vie standard, avec des statuts clairs pour vous et pour les parties.
+
+### 1. Initialisation (brouillon)
+
+- Statut : **Draft / Initialisation**.
+- Visibilité : uniquement le médiateur.
+- Situation typique : vous avez commencé à saisir des informations mais vous n’avez pas encore décidé d’envoyer les invitations.
+- Action possible : compléter, modifier, puis basculer en **Créer et Envoyer**.
+
+### 2. En attente d’accord
+
+- Statut : **En attente d’accord (Pending Agreement)**.
+- Visibilité : médiateur + invités (parties, avocats) via magic link.
+- Situation typique : les invitations ont été envoyées, vous attendez les réponses.
+- Transition :
+  - Si **toutes les parties** (demandeurs et défendeurs) acceptent : passage au statut **Actif**.
+  - Si une ou plusieurs parties refusent : le dossier pourra être **Clôturé** avec le motif « Refus Partie ».
+  - Si le délai de réponse max est dépassé sans réponse : motif de clôture possible « Expiré ».
+
+### 3. Actif
+
+- Statut : **Actif (Active)**.
+- Condition : toutes les parties ont accepté la médiation.
+- Utilisation : vous conduisez la médiation, organisez les échanges et préparez les accords.
+- Fin de phase : lorsque la médiation est terminée (accord trouvé ou non), vous clôturez le dossier manuellement.
+
+### 4. Clôturé
+
+- Statut : **Clôturé (Closed)**, avec un motif explicite :
+  - **Refus Partie** : au moins une partie a refusé la médiation.
+  - **Expiré** : délai de réponse max dépassé sans accord de toutes les parties.
+  - **Terminé** : clôture manuelle par le médiateur à l’issue de la médiation (avec ou sans accord).
+
+Le suivi des statuts vous permet de repérer rapidement les dossiers à relancer, à clôturer ou à activer.
+
+## Traçabilité et documents
+
+Chaque action importante sur un dossier doit laisser une trace pour des raisons de sécurité juridique et de transparence.
+
+- **Historique des statuts** : gardez en tête que chaque changement de statut (initialisation → en attente d’accord → actif → clôturé) est associé à une date et un motif.
+- **Journal des invitations** : les envois, relances et réponses (acceptation/refus) des parties constituent une traçabilité de la phase d’entrée en médiation.
+- **Documents de médiation** : centralisez les documents clés dans le dossier (conventions, accords, pièces utiles) afin que le dossier Hub Médiation reflète le déroulé complet de la médiation.
+
+Conservez les versions finales signées (convention de médiation, accord) associées au dossier pour pouvoir y revenir en cas de besoin.
+
+## Cas particulier : demande externe / médiateur partenaire (sas de validation)
+
+Lorsqu’une demande provient d’un **partenaire Avosmarc** ou d’un flux externe, elle peut transiter par un **sas de validation** avant d’être transformée en dossier de médiation dans votre workspace.
 
 <Steps>
-  <Step title="Respond to Request" icon="reply">
-    Reply within 24 hours. Outline your approach and fees.
+  <Step title="Réception dans le sas de validation" icon="inbox">
+    La demande apparaît dans votre sas de validation avec un délai d’acceptation (par exemple 48 h). Pendant cette phase, la demande est en attente d’acceptation par le médiateur partenaire. Les parties ne sont pas encore invitées, il ne s’agit pas encore d’un dossier de médiation actif.
   </Step>
-  <Step title="Prepare Session" icon="file-text">
-    Review case files and prepare neutral questions.
+
+  <Step title="Décider d’accepter la demande" icon="check-circle">
+    
+  - **Si vous acceptez dans le délai** :
+    - Vous validez la prise en charge de la demande.
+    - Vous vous acquittez, le cas échéant, des frais ou de la commission liée à cette demande.
+    - La demande est alors convertie en **Dossier de Médiation** standard dans votre workspace, et vous poursuivez avec le flux normal (création/complétion du dossier, invitations, etc.).
+    
+  - **Si vous refusez** :
+    - Le dossier est marqué comme refusé par le médiateur partenaire.
+    - La demande remonte automatiquement dans le réseau Avosmarc pour être réassignée ou traitée différemment.
   </Step>
-  <Step title="Finalize Outcome" icon="award">
-    Draft the mediation agreement. Upload signed documents to close the case.
+
+  <Step title="Laisser expirer le délai" icon="alert-triangle">
+    Si vous ne répondez pas dans le délai prévu (ex. 48 h) :
+    
+  - La demande est considérée comme non acceptée.
+  - Elle **remonte automatiquement** dans le flux amont, comme en cas de refus explicite.
+  - Vous ne serez plus prioritaire sur ce dossier, qui pourra être proposé à un autre médiateur.
   </Step>
 </Steps>
 
-## Best Practices for Successful Mediations
+Traitez les demandes en sas rapidement pour éviter de perdre des opportunités de médiation et pour garantir un bon service aux partenaires et aux justiciables.
 
-Follow these guidelines to maximize resolution rates and client satisfaction.
+## FAQ médiateur
 
 <ExpandableGroup>
-  <Expandable title="Communication Tips" default-open="true">
-    Listen actively without interrupting. Use open-ended questions to uncover underlying interests. Maintain neutrality at all times.
+  <Expandable title="Une partie a refusé la médiation, que devient le dossier ?" default-open="true">
+    Si au moins une partie refuse la médiation, le dossier ne peut pas passer en statut **Actif**. Il sera ou devra être basculé au statut **Clôturé** avec le motif « Refus Partie ». Vous pouvez documenter dans le dossier le contexte du refus pour votre suivi interne.
   </Expandable>
-  <Expandable title="Documentation">
-    Record key agreements verbatim. Use platform templates for consistency and legal compliance.
+
+  <Expandable title="Une invitation a expiré, puis-je relancer la partie ?">
+    Si le **délai de réponse max** est dépassé, le dossier est en situation d’**expiration**. Vous pouvez, selon votre pratique, rouvrir ou recréer un dossier en ajustant les délais et en renvoyant une nouvelle invitation, en accord avec les parties et le cadre juridique du litige.
   </Expandable>
-  <Expandable title="Follow-Up">
-    Check in post-session to ensure implementation. Offer additional sessions if needed.
+
+  <Expandable title="Comment savoir si toutes les parties ont accepté ?">
+    Le passage automatique au statut **Actif** intervient uniquement lorsque l’ensemble des parties (demandeurs et défendeurs) ont accepté. Tant que le dossier reste **En attente d’accord**, au moins une partie n’a pas encore répondu ou a refusé. Vérifiez le détail des réponses dans la liste des parties du dossier.
+  </Expandable>
+
+  <Expandable title="Qui voit quoi dans le dossier ? (cloisonnement)">
+    Le **médiateur** voit l’intégralité du dossier dans son workspace.  
+    Chaque **invité** (partie ou avocat) ne voit que le ou les dossiers auxquels il est invité via son magic link.  
+    L’**App Admin** peut réaliser des opérations de validation/assignation mais n’a pas accès au contenu confidentiel des échanges du dossier.
+  </Expandable>
+
+  <Expandable title="Que faire si je ne souhaite pas prendre une demande partenaire ?">
+    Si la demande est en **sas de validation**, vous pouvez la refuser : elle remontera automatiquement dans le flux Avosmarc pour être réassignée. Si la demande est déjà un dossier actif dans votre workspace, coordonnez-vous avec l’App Admin ou le support Avosmarc pour organiser un éventuel transfert dans le respect de vos obligations déontologiques.
   </Expandable>
 </ExpandableGroup>
-
-<Callout kind="tip">
-  Track your success metrics in the dashboard to refine your approach. High-resolution rates improve your visibility in the directory.
-</Callout>
-
-<Columns cols={2}>
-  <Card title="Annuaire" icon="users" href="https://avosmarc.fr/annuaire" horizontal>
-    Update your public profile for more referrals.
-  </Card>
-  <Card title="Support" icon="help-circle" href="https://avosmarc.fr/#faq" horizontal target="_blank">
-    Access FAQs and contact support for platform issues.
-  </Card>
-</Columns>

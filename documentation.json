@@ -17,7 +17,37 @@
       {
         "tab": "Documentation",
         "icon": "book",
-        "groups": []
+        "groups": [
+          {
+            "group": "Général",
+            "icon": "home",
+            "expandable": false,
+            "pages": [
+              {
+                "title": "Introduction",
+                "path": "introduction",
+                "icon": "home"
+              }
+            ]
+          },
+          {
+            "group": "Guides",
+            "icon": "book-open",
+            "expandable": false,
+            "pages": [
+              {
+                "title": "Guide médiateur",
+                "path": "mediator-guide",
+                "icon": "heart-handshake"
+              },
+              {
+                "title": "Guide parties & avocats",
+                "path": "parties-avocats-guide",
+                "icon": "users"
+              }
+            ]
+          }
+        ]
       },
       {
         "tab": "Centre d'aide",
