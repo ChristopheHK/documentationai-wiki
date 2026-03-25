@@ -1,0 +1,130 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Hub Médiation, ensuring you stay informed on new features and fixes.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Hub Médiation releases updates regularly to improve your mediation experience. Check back frequently for the latest enhancements.
+</Callout>
+
+Stay informed about new features, bug fixes, and improvements. Updates are deployed server-side, so you always have the latest version when you log in.
+
+<Columns cols={3}>
+  <Card title="Mediator Directory" icon="users" href="/annuaire">
+    Find certified mediators quickly with advanced filters.
+  </Card>
+  <Card title="Request Filing" icon="file-text" href="/premediation">
+    Submit mediation requests in under 5 minutes.
+  </Card>
+  <Card title="Dashboard Improvements" icon="layout-dashboard" href="#">
+    Track case progress with real-time notifications.
+  </Card>
+</Columns>
+
+## v1.3.0 - October 15, 2024
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added advanced search filters in the mediator directory, including expertise areas and location preferences.
+- Introduced real-time case status notifications via email and in-app alerts.
+
+## Improvements
+
+- Enhanced mobile responsiveness for the dashboard, ensuring seamless access on all devices.
+- Optimized request submission flow, reducing steps by 20%.
+
+## Bug Fixes
+
+- Resolved intermittent login issues for mediators.
+- Fixed display errors in case history timelines.
+
+</Update>
+
+## v1.2.0 - September 20, 2024
+
+<Update label="2024-09-20" description="v1.2.0" tags={["bugfix", "security"]}>
+
+## Improvements
+
+- Upgraded security protocols for user data handling and session management.
+
+## Bug Fixes
+
+- Corrected file upload errors during mediation request submissions.
+- Fixed search results pagination in the mediator annuaire.
+- Addressed accessibility issues for screen reader users.
+
+</Update>
+
+## v1.1.0 - August 10, 2024
+
+<Update label="2024-08-10" description="v1.1.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched integrated payment system for mediation fees directly in the platform.
+- Added multi-language support for French and English interfaces.
+
+## Breaking Changes
+
+- Updated API endpoints for request submissions; see migration guide below.
+
+## Migration Steps
+
+<Steps>
+  <Step title="Update Endpoint" icon="code">
+    
+    Replace old endpoint:
+    
+    ````javascript
+    const oldEndpoint = 'https://api.avosmarc.fr/v1/requests';
+    ````
+    
+    Use new endpoint:
+    
+    ````javascript
+    const newEndpoint = 'https://api.avosmarc.fr/v2/mediation/requests';
+    ````
+    
+  </Step>
+  <Step title="Test Integration" icon="play-circle">
+    Verify your integration with sample requests.
+  </Step>
+</Steps>
+
+</Update>
+
+## Upcoming Changes
+
+<Expandable title="Planned Features" default-open="false">
+
+In the next release (v1.4.0, expected November 2024):
+
+- Video conferencing integration for remote mediations.
+- AI-assisted dispute categorization to match optimal mediators.
+- Expanded analytics dashboard for case outcome tracking.
+
+<Callout kind="tip">
+  Provide feedback on these features via the in-app support form.
+</Callout>
+
+</Expandable>
+
+## How to Stay Updated
+
+Subscribe to release notifications:
+
+<Tabs>
+  <Tab title="Email" icon="mail">
+    Enter your email in account settings to receive changelog summaries.
+  </Tab>
+  <Tab title="RSS" icon="rss">
+    Add our RSS feed: `https://docs.avosmarc.fr/changelog.xml`
+  </Tab>
+</Tabs>
+
+For full details on any release, expand the sections above or contact support.
